@@ -1,0 +1,22 @@
+<div class="container story-container">
+	<ul class="list-inline large-font">
+		<li>
+			<span contenteditable
+				  class="large-font"
+				  ng-model="story.title"
+				  ng-model-options="{debounce: 500}"></span>
+		</li>
+		<li><span class="muted">by</span></li>
+		<li>
+			<select ng-options="user as user.name for user in users track by user._id"
+					ng-model="story.author"
+					ng-model-options="{debounce: 500}"></select>
+		</li>
+	</ul>
+	<br>
+	<p contenteditable
+		ng-model="story.paragraphs"
+		ng-model-options="{debounce: 500}"
+		ng-list="<br><br>"
+		placeholder="(text here)"></p>
+</div>

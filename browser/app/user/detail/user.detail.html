@@ -1,0 +1,24 @@
+<div class="container">
+	<user-item model="user" class="list-group-item min-content"></user-item>
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h2 class="panel-title large-font">stories</h2>
+		</div>
+		<ul class="list-group">
+			<p class="list-group-item story-item">
+				<span contenteditable placeholder="Story Title" ng-model="newStory.title"></span>
+				<button class="btn btn-warning btn-xs" ng-click="addStory()">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+			</p>
+			<p ng-repeat="story in user.stories" class="list-group-item story-item">
+				<a ui-sref="story({id: story._id})">
+					{{ story.title }}
+				</a>
+				<button class="btn btn-default btn-xs" ng-click="removeStory(story)">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+			</p>
+		</ul>
+	</div>
+</div>

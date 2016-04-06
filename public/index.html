@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auther</title>
+    <base href="/">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!--external CSS dependencies-->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+
+    <!--local CSS dependencies-->
+    <link rel="stylesheet" href="/browser/app/main.css" />
+    <link rel="stylesheet" href="/browser/components/navbar/navbar.css" />
+    <link rel="stylesheet" href="/browser/components/footer/footer.css" />
+    <link rel="stylesheet" href="/browser/components/signin/signin.css" />
+    <link rel="stylesheet" href="/browser/utils/contenteditable/contenteditable.css" />
+    <link rel="stylesheet" href="/browser/app/home/home.css" />
+    <link rel="stylesheet" href="/browser/app/user/item/user.item.css" />
+    <link rel="stylesheet" href="/browser/app/user/list/user.list.css" />
+    <link rel="stylesheet" href="/browser/app/story/list/story.list.css" />
+    <link rel="stylesheet" href="/browser/app/story/detail/story.detail.css" />
+
+    <!--external JS dependencies-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!--local JS dependencies-->
+    <script src="/browser/app/main.js"></script>
+    <script src="/browser/utils/eat-click.directive.js"></script>
+    <script src="/browser/components/navbar/navbar.directive.js"></script>
+    <script src="/browser/components/footer/footer.directive.js"></script>
+    <script src="/browser/components/oauth-button/oauth-button.directive.js"></script>
+    <script src="/browser/utils/contenteditable/contenteditable.directive.js"></script>
+    <script src="/browser/app/home/home.state.js"></script>
+    <script src="/browser/app/signup/signup.state.js"></script>
+    <script src="/browser/app/auth/auth.factory.js"></script>
+    <script src="/browser/app/login/login.controller.js"></script>
+    <script src="/browser/app/login/login.state.js"></script>
+    <script src="/browser/app/signup/signup.controller.js"></script>
+    <script src="/browser/app/signup/signup.factory.js"></script>
+    <script src="/browser/app/user/user.factory.js"></script>
+    <script src="/browser/app/user/list/user.list.state.js"></script>
+    <script src="/browser/app/user/list/user.list.controller.js"></script>
+    <script src="/browser/app/user/item/user.item.directive.js"></script>
+    <script src="/browser/app/user/detail/user.detail.state.js"></script>
+    <script src="/browser/app/user/detail/user.detail.controller.js"></script>
+    <script src="/browser/app/story/list/story.list.state.js"></script>
+    <script src="/browser/app/story/list/story.list.controller.js"></script>
+    <script src="/browser/app/story/detail/story.detail.controller.js"></script>
+    <script src="/browser/app/story/detail/story.detail.state.js"></script>
+    <script src="/browser/app/story/story.factory.js"></script>
+</head>
+<body ng-app="auther">
+	<navbar></navbar>
+    <ui-view></ui-view>
+    <footer></footer>
+</body>
+</html>
