@@ -8,6 +8,12 @@ app.config(function ($stateProvider) {
 		resolve: {
 			users: function (User) {
 				return User.fetchAll();
+			},
+			validatedUser: function (AuthFactory) {
+				return AuthFactory.getValidatedUser()
+					.then(function (user) {
+						return user;
+					})
 			}
 		}
 	});

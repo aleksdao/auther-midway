@@ -7,7 +7,8 @@ app.directive('userItem', function () {
 		scope: {
 			user: '=model',
 			glyphicon: '@',
-			iconClick: '&'
+			iconClick: '&',
+			validatedUser: "="
 		},
 		link: function (scope, elem, attrs) {
 			if (attrs.hasOwnProperty('isForm')) scope.isForm = true;
@@ -24,6 +25,9 @@ app.directive('userItem', function () {
 					scope.user.isDestroyed = true;
 				});
 			};
+			scope.printValidatedUser = function () {
+				console.log(scope.validatedUser);
+			}
 		}
 	}
 });

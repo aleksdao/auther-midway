@@ -9,6 +9,13 @@ app.config(function ($stateProvider) {
 			user: function (User, $stateParams) {
 				var user = new User({_id: $stateParams.id});
 				return user.fetch();
+			},
+			validatedUser: function (AuthFactory) {
+				return AuthFactory.getValidatedUser()
+					.then(function (user) {
+						return user;
+					})
+
 			}
 		}
 	});

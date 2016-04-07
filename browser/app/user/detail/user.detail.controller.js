@@ -1,7 +1,9 @@
 'use strict';
 
-app.controller('UserDetailCtrl', function ($scope, user, Story) {
+app.controller('UserDetailCtrl', function ($scope, user, Story, FileUploader, validatedUser) {
 	$scope.user = user;
+	$scope.validatedUser = validatedUser;
+
 	$scope.newStory = new Story({author: $scope.user});
 	$scope.addStory = function () {
 		$scope.newStory.save()
@@ -17,4 +19,7 @@ app.controller('UserDetailCtrl', function ($scope, user, Story) {
 			$scope.user.stories.splice(idx, 1);
 		});
 	};
+
+	$scope.uploader = new FileUploader();
+
 });

@@ -12,7 +12,7 @@
 		<h4 class="media-heading tucked">
 			<div ng-if="isForm" contenteditable placeholder="Jean Doe" ng-model="user.name" class="form-like"></div>
 			<span ng-if="!isForm"
-				  contenteditable
+					contenteditable="{{ validatedUser._id === user._id || validatedUser.isAdmin === true}}"
 				  placeholder="Jean Doe"
 				  ng-model="user.name"
 				  ng-model-options="{debounce: 500}"
@@ -26,7 +26,7 @@
 		<h5 class="tucked">
 			<div ng-if="isForm" contenteditable placeholder="email@website.com" ng-model="user.email" class="form-like"></div>
 			<span ng-if="!isForm"
-				  contenteditable
+					contenteditable="{{ validatedUser._id === user._id || validatedUser.isAdmin === true}}"
 				  ng-model="user.email"
 				  ng-model-options="{debounce: 500}"
 				  eat-click></span>
@@ -34,7 +34,7 @@
 		<h5 class="tucked">
 			<div ng-if="isForm" contenteditable placeholder="(555) 555-5555" ng-model="user.phone" class="form-like"></div>
 			<span ng-if="!isForm"
-				  contenteditable
+					contenteditable="{{ validatedUser._id === user._id || validatedUser.isAdmin === true}}"
 				  placeholder="(555) 555-5555"
 				  ng-model="user.phone"
 				  ng-model-options="{debounce: 500}"
@@ -42,7 +42,7 @@
 		</h5>
 	</div>
 	<div class="media-right media-middle">
-		<button ng-if="!isForm" class="btn btn-default" ng-click="removeUser()" eat-click>
+		<button ng-show="validatedUser.isAdmin" ng-if="!isForm" class="btn btn-default" ng-click="removeUser()" eat-click>
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	</div>
